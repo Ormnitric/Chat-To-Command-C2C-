@@ -2,7 +2,7 @@
 
 # Chat to Command (C2C)
 
-**Chat to Command (C2C)** is a lightweight utility mod for Minecraft that detects specific chat messages and automatically executes assigned commands or actions. Easily create custom triggers for global use or configure separate profiles for specific servers through an intuitive in-game interface.
+Chat to Command (C2C) is a lightweight utility mod for Minecraft that detects specific chat messages and automatically executes assigned commands or actions. Easily create custom triggers for global use or configure separate profiles for specific servers through an intuitive in-game interface.
 
 ---
 
