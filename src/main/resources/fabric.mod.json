@@ -1,0 +1,57 @@
+﻿{
+	"schemaVersion": 1,
+	"id": "c2c",
+	"version": "${version}",
+	"name": "Chat to Command (C2C)",
+	"description": "Chat to Command (C2C) is a utility mod that detects specific chat messages and automatically executes assigned commands, fully configurable through an in-game UI.",
+	"authors": [
+		"Losoler"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/c2c/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.man11.Manloso",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.man11.client.ManlosoClient",
+				"adapter": "kotlin"
+			}
+		],
+		"modmenu": [
+			"com.man11.client.ModMenuIntegration"
+		],
+		"fabric-datagen": [
+			{
+				"value": "com.man11.client.ManlosoDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"manloso.mixins.json",
+		{
+			"config": "manloso.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"modmenu": ">=20.0.1"
+	}
+}
