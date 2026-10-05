@@ -1,29 +1,84 @@
+---
+
 # Chat to Command (C2C)
 
-C2C watches game chat and runs configured actions when a phrase is detected.
+**Chat to Command (C2C)** is a lightweight utility mod for Minecraft that detects specific chat messages and automatically executes assigned commands or actions. Easily create custom triggers for global use or configure separate profiles for specific servers through an intuitive in-game interface.
 
-## Profiles
+---
 
-Open C2C settings and choose **Global** or the current **Server** profile. Global
-triggers run everywhere; server triggers run only while connected to that server.
-The server profile uses the server address automatically, while the server's
-display name is shown in the top-right corner of the settings screen.
+## 🌟 Features
 
-## Actions
+* **Chat Detection:** Automatically detects specified messages in the game chat.
+* **Auto Command Execution:** Executes assigned commands instantly when a trigger is detected.
+* **Chat Automation:** Sends normal chat messages automatically.
+* **Multi-Command Triggers:** Supports binding multiple actions/commands to a single trigger.
+* **Custom Delays:** Configure individual execution delays for each command.
+* **Shift Confirmation:** Requires rapid Shift presses before executing sensitive commands.
+* **Action Bar Feedback:** Displays clear confirmation progress directly in the Action Bar.
+* **Audio Cues:** Plays sound effects when confirmation is requested, pressed, completed, or cancelled.
+* **Auto-Cancel Timeout:** Automatically cancels pending actions if Shift is not pressed within 5 seconds.
+* **Profile Management:**
+* **Global Profile:** Works across all worlds and servers.
+* **Server Profiles:** Custom triggers for specific servers.
 
-Each trigger can contain multiple actions:
 
-- `/home` sends a command
-- `Hello` sends a chat message
-- `notify:Task complete` displays an action-bar notification
-- `title:Ready` displays a title
-- `sound:any` plays the confirmation sound
+* **In-Game GUI:** Fully configurable via a user-friendly menu.
+* **Management Options:** Add, remove, enable, disable, expand, and edit triggers on the fly.
+* **Quick Access:** Use the `/c2c` command or a customizable keybind to open the menu.
 
-Actions run in their configured order and can have an individual delay.
+---
 
-## Confirmation
+## ⚡ Supported Actions
 
-Enable **Confirm (Shift x5)** on a trigger to require five rapid Shift presses
-before its actions are sent. C2C displays a progress bar in chat, for example
-`[IIIII] C2C Confirm (5/5)`, with completed presses in green and remaining
-presses in gray.
+Each trigger can execute multiple actions sequentially:
+
+* `/home` — Executes a console command.
+* `Hello everyone` — Sends a standard chat message.
+* `notify:Task complete` — Displays an in-game notification.
+* `title:Ready` — Displays a title message on screen.
+* `sound:any` — Plays a confirmation or custom sound.
+
+---
+
+## 🛡️ Shift Confirmation System
+
+For sensitive triggers requiring safety confirmation, C2C displays a prompt in the Action Bar:
+
+> **Press Shift rapidly to confirm**
+
+Press **Shift three times** in quick succession to confirm the action. A 10-segment progress bar updates in real time as you press Shift. If confirmation is not completed within **5 seconds**, the pending action is cancelled, and C2C alerts you with a red cancellation message.
+
+---
+
+## ⚙️ Configuration & Commands
+
+Open the C2C configuration menu using the command:
+
+```text
+/c2c
+
+```
+
+Alternatively, you can assign a keybind in Minecraft's standard **Controls** menu.
+
+### Profiles
+
+C2C maintains separate profiles for global settings and individual servers. Server profiles automatically identify servers using their domain/IP address (excluding port numbers) for seamless switching.
+
+---
+
+## 📋 Requirements
+
+* **Minecraft:** 1.21.x / 26.2
+* **Loader:** Fabric Loader
+* **Dependencies:**
+* Fabric API
+* Fabric Language Kotlin
+
+
+
+---
+
+## 👨‍💻 Credits
+
+Created by **Losoler**
